@@ -1,24 +1,20 @@
 //Calculator program
 #include <stdio.h>
 #include <stdlib.h>
+#include "userIO.h"
+
+
 
 int main()
 {
-    int menu; //Variable for the number the user inputs
+char a[20];
+printf("Write math: " ); 
+readLine(a,20);
+;
+printf("%d",checkCalculationType(a));
+
+  /*
     float num1, num2, result; //Float variables for the user input and output, used floats in case the user enters e.g. 14.7
-
-    printf("Enter a number from the list below\n\n");
-
-    printf("1. Addition\n"); //Calculator menu, user must enter a value from 1 - 4 for the program to work
-    printf("2. Subtraction\n");
-    printf("3. Multiplication\n");
-    printf("4. Division\n\n");
-
-    printf("Enter number: "); //User input for the calculator menu
-    scanf("%d", &menu);
-
-    printf("\n");
-
     switch(menu) //switch statement for menu
     {
     case 1:
@@ -86,5 +82,6 @@ int main()
         break;
     }
     return 0;
+    */
 }
 //End of code
