@@ -2,16 +2,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "userIO.h"
-
+#include "calcFunc.h"
 
 
 int main()
 {
 char a[20];
-printf("Write math: " ); 
-readLine(a,20);
-;
-printf("%d",checkCalculationType(a));
+double value1, value2;
+printf("Write ekvation (singel operation): " );
+readLine(a, 20);
+printf("String: %s\n", a);
+int test = sscanf(a,"%lf %lf", &value1, &value2);
+printf("Type: %d\n",checkCalculationType(a));
+printf("Out: %d V1: %f V2: %f\n" ,test, value2, value1);
+
+switch(checkCalculationType(a)){
+  case 1:
+    printf("%.2lf + %.2lf = %.2lf",value1, value2, addtion(value1, value2));
+    break;
+  case 2:
+    printf("%.2lf - %.2lf = %.2lf",value1, value2, subtraction(value1, value2));
+    break;
+  case 3:
+    printf("%.2lf * %.2lf = %.2lf",value1, value2, multiplication(value1, value2));
+    break;
+  case 4:
+    printf("%.2lf / %.2lf = %.2lf",value1, value2, division(value1, value2));
+    break;
+}
 
   /*
     float num1, num2, result; //Float variables for the user input and output, used floats in case the user enters e.g. 14.7

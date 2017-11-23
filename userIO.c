@@ -9,12 +9,16 @@ int menuChoice(){
   printf("2. Subtraction\n");
   printf("3. Multiplication\n");
   printf("4. Division\n\n");
-
   printf("Enter number: "); //User input for the calculator menu
   scanf("%d", &choice);
   printf("\n");
   return choice;
 }
+
+double calculationIO(){
+
+}
+
 /*Check in a string witch type og calculation has been entered*/
 int checkCalculationType(char input[]) {
 	if (strchr(input, '+') != NULL) {
