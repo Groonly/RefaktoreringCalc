@@ -9,18 +9,17 @@ int main()
 {
 char a[20];
 double value1, value2;
-int choice, check;
+int choice;
 
 printf("Write ekvation (singel operation): " );
 readLine(a, 20);
 
 if((choice = checkCalculationType(a)) == 0){
-  printf("Invallid sign\n");
+  printf("Invalid sign\n");
   exit(0);
 }
 
-check = sscanf(a,"%lf %lf", &value1, &value2);
-if(check != 2){
+if(sscanf(a,"%lf %lf", &value1, &value2) != 2){
   printf("Input error");
   exit(0);
 }
