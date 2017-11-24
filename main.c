@@ -5,12 +5,13 @@
 #include "calcFunc.h"
 
 
-int main()
-{
+int main(){
+
 char a[20];
 double value1, value2;
 int choice;
 
+printf("-----------CALCULATOR-------------\n" );
 printf("Write ekvation (singel operation): " );
 readLine(a, 20);
 
