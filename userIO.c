@@ -15,25 +15,39 @@ int menuChoice(){
   return choice;
 }
 
-double calculationIO(){
-
-}
-
-/*Check in a string witch type og calculation has been entered*/
 int checkCalculationType(char input[]) {
-	if (strchr(input, '+') != NULL) {
-    return 1;
-	}
-	else if(strchr(input, '-') != NULL) {
-    return 2;
-	}
-  else if(strchr(input, '*') != NULL){
-    return 3;
-  }
-  else if(strchr(input, '/') != NULL){
-    return 4;
+  for(int i = 0; i < strlen(input); i++){
+    if(input[i] == '+'){
+      input[i] = ' ';
+      return 1;
+    }
+    else if(input[i] == '-'){
+      input[i] = ' ';
+      return 2;
+      printf("Check");
+    }
+    else if(input[i] == '*'){
+      input[i] = ' ';
+      return 3;
+      printf("Check");
+    }
+    else if(input[i] == '/'){
+      input[i] = ' ';
+      return 4;
+      printf("Check");
+    }
   }
   return 0;
+}
+
+char *getElementFromChar(char *thestring, int number) {
+    char *token;
+    const char s[2] = ".";
+    token = strtok(thestring, s);
+    for (int i=0;i<number;i++) {
+      token = strtok(NULL, s);
+    }
+    return token;
 }
 
 /*Reads string from stdin*/
