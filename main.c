@@ -7,20 +7,20 @@
 
 int main(){
 
-char a[20];
+char inputStr[20];
 double value1, value2;
 int choice;
 
 printf("-----------CALCULATOR-------------\n" );
 printf("Write ekvation (singel operation): " );
-readLine(a, 20);
+readLine(inputStr, 20);
 
-if((choice = checkCalculationType(a)) == 0){
+if((choice = checkCalculationType(inputStr)) == 0){
   printf("Invalid sign\n");
   exit(0);
 }
 
-if(sscanf(a,"%lf %lf", &value1, &value2) != 2){
+if(sscanf(inputStr,"%lf %lf", &value1, &value2) != 2){
   printf("Input error");
   exit(0);
 }
