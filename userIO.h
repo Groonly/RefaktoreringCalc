@@ -7,4 +7,3 @@ int checkCalculationType(char input[]);
 int readLine(char *a, int n);
 void skipLine(void);
 int removeNewLine(char a[]);
-char *getElementFromChar(char *thestring, int number); 
