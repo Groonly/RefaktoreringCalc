@@ -1,5 +1,5 @@
 #include "userIO.h"
-/*loop thru input array and check for ekvation signs, remove sign*/
+/*loop thru input array and check for ekvation signs, remove ekvationsign to get functinal reading with sscanf*/
 int checkCalculationType(char input[]) {
   for(int i = 0; i < strlen(input); i++){
     if(input[i] == '+'){
